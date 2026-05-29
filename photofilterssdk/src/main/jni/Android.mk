@@ -11,4 +11,6 @@ LOCAL_SRC_FILES := \
 LOCAL_C_INCLUDES += src/debug/jni
 LOCAL_C_INCLUDES += src/main/jni
 
+LOCAL_LDFLAGS += -Wl,-z,max-page-size=16384 -Wl,-z,common-page-size=4096
+
 include $(BUILD_SHARED_LIBRARY)
